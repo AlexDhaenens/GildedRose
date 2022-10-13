@@ -2,6 +2,7 @@
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\..\packages\xunit.runner.visualstudio.2.0.0\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\..\packages\xunit.runner.visualstudio.2.0.0\build\net20\xunit.runner.visualstudio.props')" />
   <Import Project="..\..\packages\xunit.core.2.4.2\build\xunit.core.props" Condition="Exists('..\..\packages\xunit.core.2.4.2\build\xunit.core.props')" />
+  <Import Project="..\..\packages\Microsoft.CodeCoverage.17.3.2\build\netstandard1.0\Microsoft.CodeCoverage.props" Condition="Exists('..\..\packages\Microsoft.CodeCoverage.17.3.2\build\netstandard1.0\Microsoft.CodeCoverage.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -43,6 +44,21 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>..\..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="xunit.abstractions">
+      <HintPath>..\..\packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.CodeCoverage.Shim">
+      <HintPath>..\..\packages\Microsoft.CodeCoverage.17.3.2\lib\net45\Microsoft.VisualStudio.CodeCoverage.Shim.dll</HintPath>
+    </Reference>
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -102,5 +118,6 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Import Project="..\..\packages\Microsoft.CodeCoverage.17.3.2\build\netstandard1.0\Microsoft.CodeCoverage.targets" Condition="Exists('..\..\packages\Microsoft.CodeCoverage.17.3.2\build\netstandard1.0\Microsoft.CodeCoverage.targets')" />
   <Import Project="..\..\packages\xunit.core.2.4.2\build\xunit.core.targets" Condition="Exists('..\..\packages\xunit.core.2.4.2\build\xunit.core.targets')" />
 </Project>
