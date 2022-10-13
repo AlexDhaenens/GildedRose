@@ -43,10 +43,20 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Updaters\IItemUpdater.cs" />
+    <Compile Include="Updaters\ItemUpdater.cs" />
+    <Compile Include="Updaters\BaseNormalItemUpdater.cs" />
+    <Compile Include="Updaters\LegendaryItemUpdater.cs" />
+    <Compile Include="Updaters\BackStagePassItemUpdater.cs" />
+    <Compile Include="Updaters\ConjuredItemUpdater.cs" />
+    <Compile Include="Updaters\NormalItemUpdater.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Updaters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
