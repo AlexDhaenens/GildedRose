@@ -88,6 +88,7 @@
     <Compile Include="NormalItemTests.cs" />
     <Compile Include="ConjuredItemTests.cs" />
     <Compile Include="BackPassItemTests.cs" />
+    <Compile Include="UpdateItemTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

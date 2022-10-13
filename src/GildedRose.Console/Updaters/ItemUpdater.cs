@@ -30,6 +30,10 @@ namespace GildedRose.Console.Updaters
             {
                 return ItemType.Legendary;
             }
+            if(item.Name == "Conjured Mana Cake")
+            {
+                return ItemType.Conjured;
+            }
             return ItemType.Normal;
         }
 
